@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register page</h1>
+    <form action="/register" method="post">
+        <label for="firstname" >First Name:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Name" required>
+        <br>
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Surname" required>
+        <br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br>
+        <label for ="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <br>
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+    error message: {{ error_message }}
+</body>
+</html>

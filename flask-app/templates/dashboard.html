@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to your Dashboard!</h1>
+    <p>This is a protected area only accessible to logged-in users.</p>
+    <h2>Table</h2>
+    <a href="/view_users">View Users Table</a>
+    <br><br>
+    <h2>Update Password</h2>
+    <form action="/update_password" method="post">
+        <label for="username" >Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br>
+        <label for="new_password">New Password:</label>
+        <input type="password" id="new_password" name="new_password" placeholder="New Password" required>
+        <br>
+        <label for="confirm_password">Confirm New Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm New Password" required>
+        <br>
+        <button type="submit">Update Password</button>
+    </form>
+    <br>
+    <h2>Delete Account</h2> 
+    <form action="/delete_account" method="post">
+        <label for="username_delete" >Username:</label>
+        <input type="text" id="username_delete" name="username" placeholder="Username" required>
+        <br>
+        <input type = "password" name="password" placeholder="Enter your password to confirm" required>
+        <br>
+
+        <button type="submit" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">Delete Account</button>
+
+    <a href="/logout">Logout</a>
+    
+</body>
+</html>
