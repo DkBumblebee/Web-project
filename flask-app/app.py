@@ -82,8 +82,10 @@ def delete_account():
 
 
 
-@app.route("/view_users")
-def view_users():
+@app.route("/table")
+def table():
+    if not session:
+        return redirect("/login")
     data = get_data()
     return render_template('table.html', users=data)
 
